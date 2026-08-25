@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wwia-polarity"
+version = "0.4.0"
+description = "WWIA Polarity Bias – Domestic & Multipolar polarity scoring with Range of Multipolarity ranking and Threshold Vector conflict detection"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Research / Internal Use"}
+authors = [
+    {name = "WWIA Research"}
+]
+keywords = ["polarity", "multipolarity", "geopolitics", "intelligence", "nlp", "conflict-risk"]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pandas>=2.1",
+    "sentence-transformers>=3.0",
+    "transformers>=4.40",
+    "pyyaml>=6.0",
+    "click>=8.1",
+    "tqdm>=4.66",
+    "scikit-learn>=1.4",
+    "networkx>=3.2",
+    "streamlit>=1.35",
+    "plotly>=5.22"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=24.0",
+    "ruff>=0.4"
+]
+
+[project.scripts]
+wwia-polarity = "wwia_polarity.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/wwia/polarity-bias"
+Documentation = "https://github.com/wwia/polarity-bias#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"wwia_polarity" = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+```​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
