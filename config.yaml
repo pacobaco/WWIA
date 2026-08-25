@@ -1,0 +1,27 @@
+embedding_model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+alpha: 0.5
+kappa: 1.0
+min_posts: 5
+weight_by_engagement: true
+default_countries: "US,IL,IR,SA,YE,TR,PK,UA,RU,CN,TW,AE,BH,KW,LB,SY,IQ,EG,JO,QA,IN"
+
+threshold:
+  t_dom: 0.60
+  t_Pi: 0.40
+  t_CP: 0.50
+  t_hot: 0.70
+
+range_tiers:
+  extreme: 1.0
+  high: 0.70
+  moderate_high: 0.50
+  moderate: 0.30
+
+gamification:
+  xp_per_level: 1000
+  challenges:
+    daily_threshold: 150
+    matrix_master: 400
+    rank_predictor: 200
+    first_flag: 300
+    range_detector: 250
